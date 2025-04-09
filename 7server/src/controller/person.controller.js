@@ -43,7 +43,7 @@ const create = async (req, res) => {
               da clic en el enlace que aparece a continuación:
             </p>
                             <!-- Button as image -->
-                            <a href="https://7up-sandy.vercel.app/validate"  target="_blank" style="display: inline-block; text-decoration: none;">
+                            <a href="https://7promo-rt-7up.vercel.app/validate"  target="_blank" style="display: inline-block; text-decoration: none;">
                               <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c0d528b5-ad70-af56-213c-ac5b70edfaae.png?w=561&dpr=2" alt="Confirma tu cuenta" width="250" style="margin: 20px 0;">
                             </a>
           
@@ -52,7 +52,7 @@ const create = async (req, res) => {
               copia y pega el siguiente vínculo en tu explorador:
             </p>
             <p style="font-size: 18px; margin: 0 0 10px; color: white; font-weight: bold;">
-              https://7up-sandy.vercel.app/validate
+             https://7promo-rt-7up.vercel.app/validate
             </p>
             <p style="font-size: 18px; margin: 0 0 10px; color: white;">
               ¡Ahora podrás empezar a subir tus recibos para participar!
@@ -171,36 +171,39 @@ const generateTokenByUser = async (req, res) => {
 
 
     let envio = `
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #28a745; font-family: Arial, sans-serif;">
-      <tr>
-        <td align="center">
-          <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; margin: 20px auto; border-radius: 8px; overflow: hidden;">
-            <tr>
-              <td style="padding: 0;">
-                <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c3fe9771-322f-e344-2135-a6585f5db12c.png?w=561&dpr=2" alt="7up Promo Header" width="600" style="display: block; width: 100%;">
-              </td>
-            </tr>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #28a745; font-family: Arial, sans-serif;">
+  <tr>
+    <td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; margin: 20px auto; border-radius: 8px; overflow: hidden;">
+        <tr>
+          <td style="padding: 0;">
+            <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c3fe9771-322f-e344-2135-a6585f5db12c.png?w=561&dpr=2" alt="7up Promo Header" width="600" style="display: block; width: 100%;">
+          </td>
+        </tr>
 
-            <tr>
-              <td style="padding: 30px; background-color: #25a140; text-align: center; color: #000;">
-                <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person.name}</b>
-                <br>
-                <p style="font-size: 18px; margin: 0 0 10px; color: white;">PARA RECUPERAR TU CONTRASEÑA,<br> DA CLICK EN EL ENLACE QUE APARECE A CONTINUACIÓN.</p>
-                 https://7promo-production.up.railway.app/pass/${token}
-                <p style="font-size: 18px; margin: 0 0 10px; color: white;">
-                  ¡GRACIAS!
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 0;">
-                <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/1360d8e0-bbbf-6aa5-8f05-b4dd91945f24.png?w=561&dpr=2" alt="7up Promo Footer" width="600" style="display: block; width: 100%;">
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+        <tr>
+          <td style="padding: 30px; background-color: #28a745; text-align: center; color: #000;">
+            <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person.name.toUpperCase()}</b>
+            <br>
+            <p style="font-size: 18px; margin: 0 0 10px; color: white;">Para recuperar tu contraseña, <br>
+              da clic en el enlace que aparece a continuación. <br>
+              https://7promo-rt-7up.vercel.app/${token}
+              </p>
+           
+            <p style="font-size: 18px; margin: 0 0 10px; color: white;">
+              ¡GRACIAS!
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0;">
+            <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/1360d8e0-bbbf-6aa5-8f05-b4dd91945f24.png?w=561&dpr=2" alt="7up Promo Footer" width="600" style="display: block; width: 100%;">
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
     `;
 
     const mailOptions = {
