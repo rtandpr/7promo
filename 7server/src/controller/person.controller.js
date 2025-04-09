@@ -185,12 +185,12 @@ const generateTokenByUser = async (req, res) => {
           <td style="padding: 30px; background-color: #28a745; text-align: center; color: #000;">
             <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person.name.toUpperCase()}</b>
             <br>
-            <p style="font-size: 18px; margin: 0 0 10px; color: white;">Para recuperar tu contraseña, <br>
+            <p style="font-size: 18px; margin: 0 0 10px; color:  #ffffff;">Para recuperar tu contraseña, <br>
               da clic en el enlace que aparece a continuación. <br>
               https://7promo-rt-7up.vercel.app/pass/${token}
               </p>
            
-            <p style="font-size: 18px; margin: 0 0 10px; color: white;">
+            <p style="font-size: 18px; margin: 0 0 10px; color:  #ffffff;;">
               ¡GRACIAS!
             </p>
           </td>
