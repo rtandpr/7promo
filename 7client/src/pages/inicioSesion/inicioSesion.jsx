@@ -75,7 +75,7 @@ const InicioSesion = () => {
                   }
               
                 try {
-                  const response = await fetch("https://7up-production.up.railway.app/user/getUserByEmail", {
+                  const response = await fetch("https://7promo-production.up.railway.app/user/getUserByEmail", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
@@ -131,7 +131,7 @@ const InicioSesion = () => {
               email: formData.Correo,
             }
     
-            const response = await fetch("https://7up-production.up.railway.app/user/generateTokenByUser", {
+            const response = await fetch("https://7promo-production.up.railway.app/user/generateTokenByUser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

@@ -88,7 +88,7 @@ const RecuperarPass = () => {
                   }
               
                 try {
-                  const response = await fetch("https://7up-production.up.railway.app/user/resetPass", {
+                  const response = await fetch("https://7promo-production.up.railway.app/user/resetPass", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
@@ -152,7 +152,7 @@ const RecuperarPass = () => {
               email: formData.Correo,
             }
     
-            const response = await fetch("https://7up-production.up.railway.app/user/generateTokenByUser", {
+            const response = await fetch("https://7promo-production.up.railway.app/user/generateTokenByUser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

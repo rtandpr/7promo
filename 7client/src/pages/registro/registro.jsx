@@ -170,7 +170,7 @@ const Registro = () => {
           }
       
         try {
-          const response = await fetch("https://7up-production.up.railway.app/user/createUser", {
+          const response = await fetch("https://7promo-production.up.railway.app/user/createUser", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

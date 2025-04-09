@@ -66,7 +66,7 @@ const SubirVoucher = () => {
           
             setLoading(true)
             try {
-              const response = await fetch("https://7up-production.up.railway.app/img/createImg", {
+              const response = await fetch("https://7promo-production.up.railway.app/img/createImg", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
