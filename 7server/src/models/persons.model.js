@@ -16,6 +16,8 @@ class Person extends Model {
 
 const PersonSchema = {
 
+
+  
   id: {
         allowNull: true,
         autoIncrement: true, // Auto-incremental

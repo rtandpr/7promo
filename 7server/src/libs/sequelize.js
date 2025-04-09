@@ -4,7 +4,7 @@ const setupModels = require("../models/index");
 
 
  let sequelize = new Sequelize(
-  `postgresql://postgres:TRaPozzkeedepRsfiPiZpKCEDqsXWpOU@ballast.proxy.rlwy.net:20677/railway`,
+  `postgresql://postgres:OODUQHVlyRDJTLQecaEAZizvoyakERhA@switchback.proxy.rlwy.net:22635/railway`,
   {
     logging: false,
     native: false,
