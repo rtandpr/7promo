@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    background-color: #32ab56;
+    
+}
+
+
+a{
+    font-size: 24px;
+    color: white;
+}
+
+.swal-custom-font {
+    font-size: 28px !important;
+  }

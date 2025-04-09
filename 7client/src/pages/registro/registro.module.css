@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Omnes';
+    src: url('../../fonts/Korolev Bold Compressed.otf') format('opentype'); /* Cambié 'truetype' a 'opentype' si es necesario */
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+.container{
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #32ab56;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+.titleImg2{
+  width: 70%;
+  position: relative;
+}
+
+
+.titleImg{
+    width: 14%;
+    position: relative;
+    top: 50px;
+  }
+
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.formGroup{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.a{
+    margin-top: 50px;
+    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+    margin-left: 5px;
+}
+
+.p{
+  margin-top: 40px;
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  color: white;
+  font-size: 24px;
+}
+
+
+.containerFooter{
+  margin-top: -170px;
+  padding-top: 100px;
+  background-color: white;
+}
+
+.ballonder2{
+  position: absolute;
+  top: 13%;
+  right: 10%;
+  width: 10%;
+}
+
+.ballonder{
+  position: absolute;
+  bottom: 43%;
+  left: 10%;
+  width: 8%;
+}
+
+.ballon1zq{
+  position: absolute;
+  bottom: 16%;
+  right: 10%;
+  width: 8%;
+}
+
+.contentInputsCheck{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divChek{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 40px;
+}
+
+.divChek input{
+  margin-right: 10px;
+}
+
+
+.productosImg{
+  position: relative;
+  right: 30px;
+  top: -30px; 
+  width: 17%;
+}
+
+.brResp{
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+
+  .ballonder2{
+   display: none;
+  }
+  
+  .ballonder{
+    display: none;
+  }
+  
+  .ballon1zq{
+    display: none;
+  }
+
+  .productosImg{
+    width: 75%;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .titleImg{
+    width:55%;
+  } 
+
+  .titleImg2{
+    width: 70%;
+    position: relative;
+  }
+  
+
+  .p{
+    padding: 20px;
+  }
+  
+  .formGroup{
+    flex-direction: column;
+  }
+  
+  .contentInputsCheck{
+    flex-direction: column;
+  }
+  .divChek{
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  .brResp{
+    display: flex;
+  }
+  
+}

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Omnes';
+    src: url('../../fonts/Korolev Bold Compressed.otf') format('opentype'); /* Cambié 'truetype' a 'opentype' si es necesario */
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+.container{
+    margin-top: 100px;
+    font-family:  Arial,sans-serif !important;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .title h1 {
+    color: white;
+    font-size: 100px;
+
+  }
+
+
+  .titleImg2{
+    width: 70%;
+  }
+  
+  
+  .titleImg{
+      width: 17%;
+      margin-bottom: 10px;
+    }
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    position: relative;
+    top: -40px;
+}
+
+.formGroup{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.a{
+  letter-spacing: 1.4px;
+    margin-left: 5px;
+}
+
+.p{
+ letter-spacing: 1.4px;
+  color: white;
+  font-size: 24px;
+}
+
+
+.containerFooter{
+  margin-top: -170px;
+  padding-top: 100px;
+  background-color: white;
+}
+
+.ballonder2{
+  position: absolute;
+  top: 13%;
+  right: 10%;
+  width: 10%;
+}
+
+.ballonder{
+  position: absolute;
+  bottom: 43%;
+  left: 10%;
+  width: 8%;
+}
+
+.ballon1zq{
+  position: absolute;
+  bottom: 16%;
+  right: 10%;
+  width: 8%;
+}
+
+.productosImg{
+  position: relative;
+  right: 30px;
+  top: -30px; 
+  width: 17%;
+}
+
+
+@media (max-width: 768px) {
+
+
+  .ballonder2{
+   display: none;
+  }
+  
+  .ballonder{
+    display: none;
+  }
+  
+  .ballon1zq{
+    display: none;
+  }
+
+  .productosImg{
+     /* position: relative;
+     right: 30px;
+     width: 200px; */
+     position: relative;
+     right:30px;     
+     width: 65%;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .titleImg{
+    width: 75%;
+  } 
+
+  .p{
+    padding: 20px;
+  }
+  
+
+  .productosImg{
+    position: relative;
+   
+  
+  }
+  
+  
+}

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Omnes';
+    src: url('../../fonts/Korolev Bold Compressed.otf') format('opentype'); /* Cambié 'truetype' a 'opentype' si es necesario */
+    font-weight: bold;
+    font-style: normal;
+  }
+
+
+body{
+    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+}
+
+.swal-custom-font {
+    font-size: 28px !important;
+  }
+
+
+  @media (max-width: 768px) {
+     /* .divSpac{
+      display: none;
+     } */
+  }

@@ -1,0 +1,221 @@
+
+.tycBackground{
+    background-color: white;
+  }
+  
+  .container{
+      background-color: #32ab56;
+      margin-top: 10px;
+  }
+  
+  .navbarStyles{
+    background-color: #32ab56;
+  }
+  
+  .container {
+      /* padding: 20px; */
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 170px;
+      height: 1;
+      margin-bottom: 0px;
+    }
+    
+    .container2 {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 100px;
+      height: 1;
+      margin-bottom: 0px;
+      position: relative;
+      top: 70px;
+    }
+
+    .titleImg2{
+      width: 100%;
+    }
+    
+    
+    .titleImg{
+        width: 15%;
+      }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #32ab56;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .text {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: white;
+      padding-left: 10%;
+      padding-right: 10%;
+      text-align: center;
+      font-size: 24px;
+    }
+    
+    .list {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+    
+    .list li {
+      margin-bottom: 10px;
+    }
+    
+    .list a {
+      color: #32ab56;
+      text-decoration: none;
+    }
+    
+    .list a:hover {
+      text-decoration: underline;
+    }
+    .containImg{
+      /* position: absolute;
+      top: 65%;
+      left: 33%; */
+      text-align: center;
+      position: relative;
+      top: 20.5vh;
+    }
+
+
+    .porductosImg{
+      position: relative;
+      right: 30px; 
+      top: 20px;
+      top: -0px;
+      width: 17%;
+    }
+
+
+    .containImg2{
+      position: absolute;
+      top: 18%;
+      left: -20px;
+      text-align: center;
+    }
+  
+    .ballonder2{
+      width: 50%;
+    }
+  
+    
+    .containerFooter{
+      margin-top: 150px;
+    }
+  
+  
+    .titleImg{
+      font-size: 17%;
+    }
+  
+  
+    .containImg3{
+      position: absolute;
+      top: 45%;
+      right: 0%;
+      text-align: center;
+    }
+  
+    .ballonder{
+      width: 30%;
+    }
+  
+  
+    .containImg4{
+      position: absolute;
+      top:48%;
+      left: 67%;
+      text-align: right;
+    }
+  
+    .ballon1zq{
+      width: 60%;
+    }
+  
+
+    .containerFooter{
+      margin-top: 300px;
+    }
+
+    
+    @media (min-width: 1600px) { 
+
+      .containImg{
+        /* position: absolute;
+        top: 65%;
+        left: 33%; */
+        text-align: center;
+        position: relative;
+        top: 16vh;
+      }
+  
+    }
+
+
+  
+  
+  
+    @media (max-width: 768px) {
+  
+  
+      .containImg{
+        width: 70%;
+        position: relative;
+      }
+    
+      .containImg2{
+        display: none;
+      }
+      .containImg3{
+        display: none;
+      }
+      .containImg4{
+       display: none;
+      }
+  
+      .titleImg{
+          width: 75%;
+      }
+  
+       .text {
+          padding-left: 0%;
+          padding-right: 0%;
+          font-size: 20px;
+      }
+      .text a {
+        font-size: 20px;
+    }
+      .container {
+          padding-bottom: 00px;
+          min-height: 140%;
+          min-height: 100vh;
+      }
+
+      .container2{
+         top: 70px;
+      }
+      
+      .navbarStyles{
+        background-color: #32ab56;
+        position: relative;
+        top: -10px;
+      }
+
+      .porductosImg{
+        position: relative;
+        right: -40px;  
+  
+        top: -200px;
+        width: 100%;
+      }
+    }

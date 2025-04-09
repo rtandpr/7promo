@@ -1,0 +1,165 @@
+.homeBackground{
+    width: 100%;
+    height: 150vh; 
+    position: relative;
+    top: -165px;
+    left: 0; 
+    background-image: url("../../assets/fondo1.jpg"); 
+    background-size: cover; 
+    /* background-position: center center;  */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    z-index: -1; 
+}
+
+/* .homeFondo{
+    background-color: white;
+} */
+
+.secondImg{
+    width: 100%;
+    z-index: 1; 
+    height: 30px;
+}
+
+.titularImg{
+    width: 45%;
+    height: auto;
+    position: relative;
+    top: 78vh;
+    left: 300px;
+    z-index: 1; 
+    
+}
+
+.secondSection{
+    width: 100%;
+    height: 130vh;
+    background-color:#32ab56;
+    position: relative;
+    top: -165px;
+}
+
+.participaImg{
+    width: 50%;
+    left: 170px;
+    height: auto;
+    position: relative;
+    top: 0vh;
+
+}
+
+.baloonImg{
+    width: 10%;
+    left: 200px;
+    height: auto;
+    position: relative;
+    top: -5vh;
+
+}
+
+.premiosImg{
+    width: 58%;
+    height: auto;
+    position: relative;
+    top: 10vh;
+    left: 25%;
+}
+
+.porductosImg{
+    width: 27%;
+    height: auto;
+    position: absolute;
+    bottom: -80px;
+    left: 10%;
+}
+
+.containerFooter{
+    margin-top: -170px;
+    padding-top: 80px;
+    background-color: white;
+  }
+
+
+  .premiosImg2{
+    display: none;
+  }
+
+
+@media (max-width: 700px) {
+    .homeBackground{
+        height: 100vh; 
+        background-position: center center;  
+        background-repeat: no-repeat; 
+    }
+
+    .titularImg{
+        width: 60%;
+        height: auto;
+        position: relative;
+        top: 50vh;
+        left: 40px;
+        z-index: 1; 
+    }
+
+    .participaImg{
+        width: 90%;
+        left: 20px;
+        height: auto;
+        position: relative;
+        top: -3vh;
+
+    }
+
+    .secondSection{
+        width: 100%;
+        height: 68vh;
+        background-color:#32ab56;
+        position: relative;
+        top: -165px;
+    }
+    
+
+    .baloonImg{
+        width: 100px;
+        right: 0;
+        height: auto;
+        position: absolute;
+        top: 45vh;
+        display: none;
+    
+    }
+    
+    .premiosImg{
+        width: 90%;
+        height: auto;
+        position: absolute;
+        left: 20px;
+        top: 20vh;
+        display: none;
+    }
+    
+
+    .premiosImg2{
+        width: 90%;
+        height: auto;
+        position: absolute;
+        left: 20px;
+        top: 20vh;
+        display: flex;
+    }
+
+
+    .porductosImg{
+        width: 70%;
+        height: auto;
+        position: absolute;
+        /* bottom: -300; */
+        left: 40px;
+        bottom: -110px;
+        
+    }
+
+
+
+  }
