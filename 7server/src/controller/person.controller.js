@@ -187,7 +187,7 @@ const generateTokenByUser = async (req, res) => {
             <br>
             <p style="font-size: 18px; margin: 0 0 10px; color: white;">Para recuperar tu contraseña, <br>
               da clic en el enlace que aparece a continuación. <br>
-              https://7promo-rt-7up.vercel.app/${token}
+              https://7promo-rt-7up.vercel.app/pass/${token}
               </p>
            
             <p style="font-size: 18px; margin: 0 0 10px; color: white;">
