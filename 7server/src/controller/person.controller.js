@@ -43,7 +43,7 @@ const create = async (req, res) => {
               da clic en el enlace que aparece a continuación:
             </p>
                             <!-- Button as image -->
-                            <a href="https://7promo-rt-7up.vercel.app/validate"  target="_blank" style="display: inline-block; text-decoration: none;">
+                            <a href="https://www.7uppr.com/validate"  target="_blank" style="display: inline-block; text-decoration: none;">
                               <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c0d528b5-ad70-af56-213c-ac5b70edfaae.png?w=561&dpr=2" alt="Confirma tu cuenta" width="250" style="margin: 20px 0;">
                             </a>
           
@@ -52,7 +52,7 @@ const create = async (req, res) => {
               copia y pega el siguiente vínculo en tu explorador:
             </p>
             <p style="font-size: 18px; margin: 0 0 10px; color: white; font-weight: bold;">
-             https://7promo-rt-7up.vercel.app/validate
+               https://www.7uppr.com/validate
             </p>
             <p style="font-size: 18px; margin: 0 0 10px; color: white;">
               ¡Ahora podrás empezar a subir tus recibos para participar!
@@ -187,7 +187,7 @@ const generateTokenByUser = async (req, res) => {
             <br>
             <p style="font-size: 18px; margin: 0 0 10px; color:  #ffffff;">Para recuperar tu contraseña, <br>
               da clic en el enlace que aparece a continuación. <br>
-              https://7promo-rt-7up.vercel.app/pass/${token}
+              https://www.7uppr.com/pass/${token}
               </p>
            
             <p style="font-size: 18px; margin: 0 0 10px; color:  #ffffff;;">
