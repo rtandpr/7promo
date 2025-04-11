@@ -36,7 +36,7 @@ const create = async (req, res) => {
 
         <tr>
           <td style="padding: 30px; background-color: #28a745; text-align: center; color: #000;">
-            <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person.name.toUpperCase()}</b>
+            <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${newPerson.name.toUpperCase()}</b>
             <br><br>
             <p style="font-size: 18px; margin: 0 0 10px; color: white;">
               Para completar tu registro,<br>
@@ -183,7 +183,7 @@ const generateTokenByUser = async (req, res) => {
 
         <tr>
           <td style="padding: 30px; background-color: #28a745; text-align: center; color: #000;">
-            <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person.name.toUpperCase()}</b>
+            <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person?.name?.toUpperCase()}</b>
             <br>
             <p style="font-size: 18px; margin: 0 0 10px; color:  #ffffff;">Para recuperar tu contraseña, <br>
               da clic en el enlace que aparece a continuación. <br>
