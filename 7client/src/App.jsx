@@ -14,6 +14,7 @@ import RecuperarPass from './pages/recuperarPass/recuperar';
 
 
 import usePageTracking from './hooks/useGa';
+import PageEntrance from './components/pageEfect/pageEfect';
 
 
 
@@ -25,17 +26,17 @@ function App() {
      {/* <Navbar></Navbar> */}
 
      {/* <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div> */}
-     <BrowserRouter>
+     <BrowserRouter>     
         <Routes>
-          <Route path="/" element={<Home></Home>} />
-          <Route path="/Tyc" element={<TyC/>} />
-          <Route path="/inicioSesion" element={<InicioSesion/>} />
-          <Route path="/Registro" element={<Registro />} />
-          <Route path="/miPerfil" element={<MiPerfil/>} />
-          <Route path="/SubirVoucher" element={<SubirVoucher/>} /> 
-          <Route path="/validate" element={<CorreoOk/>} />
-          <Route path="/Priv" element={<Priv/>} />
-          <Route path="/Ganadores" element={<Ganadores/>} />
+          <Route path="/" element={<PageEntrance><Home/></PageEntrance>} />
+          <Route path="/Tyc" element={<PageEntrance><TyC/></PageEntrance> } />
+          <Route path="/inicioSesion" element={<PageEntrance><InicioSesion/></PageEntrance>} />
+          <Route path="/Registro" element={<PageEntrance><Registro/></PageEntrance>} />
+          <Route path="/miPerfil" element={<PageEntrance><MiPerfil/></PageEntrance>} />
+          <Route path="/SubirVoucher" element={<PageEntrance><SubirVoucher/></PageEntrance>} /> 
+          <Route path="/validate" element={<PageEntrance><CorreoOk/></PageEntrance>} />
+          <Route path="/Priv" element={<PageEntrance><Priv/></PageEntrance>} />
+          <Route path="/Ganadores" element={<PageEntrance><Ganadores/></PageEntrance>} />
           <Route path="/pass/:id" element={<RecuperarPass />} />
          </Routes>
       </BrowserRouter>

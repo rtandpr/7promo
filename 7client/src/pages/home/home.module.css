@@ -72,6 +72,7 @@
     position: absolute;
     bottom: -80px;
     left: 10%;
+    transition: 1s;
 }
 
 .containerFooter{
@@ -86,6 +87,18 @@
   }
 
 
+  .porductosImg {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fadeDownRight {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
 @media (max-width: 700px) {
     .homeBackground{
         height: 100vh; 
@@ -94,7 +107,7 @@
     }
 
     .titularImg{
-        width: 60%;
+        width: 80%;
         height: auto;
         position: relative;
         top: 50vh;
@@ -150,16 +163,24 @@
     }
 
 
-    .porductosImg{
+   .porductosImg{
         width: 70%;
         height: auto;
         position: absolute;
-        /* bottom: -300; */
         left: 40px;
         bottom: -110px;
         
     }
 
 
-
+    .porductosImg {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    
+    .fadeDownRight {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }

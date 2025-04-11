@@ -1,0 +1,32 @@
+.page-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.green-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+  z-index: 999;
+  animation: fadeOut .5s ease-out .5s forwards;
+}
+
+/* Esto asegura que el contenido no se vea hasta que se quite la cortina */
+.page-content.hidden {
+  opacity: 0;
+}
+
+.page-content.visible {
+  opacity: 1;
+  transition: opacity .5s ease-in .5s;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
