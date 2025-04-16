@@ -38,7 +38,7 @@ function App() {
           <Route path="/validate" element={<PageEntrance><CorreoOk/></PageEntrance>} />
           <Route path="/Priv" element={<PageEntrance><Priv/></PageEntrance>} />
           <Route path="/Ganadores" element={<PageEntrance><Ganadores/></PageEntrance>} />
-          <Route path="admin/infoUers/total" element={<Infouser/>} />
+          <Route path="admin/infoUsers/total" element={<Infouser/>} />
           <Route path="/pass/:id" element={<RecuperarPass />} />
          </Routes>
       </BrowserRouter>
