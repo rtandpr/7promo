@@ -230,7 +230,6 @@ const generateTokenByUser = async (req, res) => {
 };
 
 
-
 const resetPass = async (req, res) => {
   try {
     const { tokenResetPass , pass } = req.body;
@@ -250,6 +249,31 @@ const resetPass = async (req, res) => {
   }
 };
 
+const GetUsers = async (req, res) => {
+  try {
+    // Obtener todas las personas
+    const persons = await models.Person.findAll();
+
+    // Obtener todas las imágenes
+    const images = await models.Img.findAll();
+
+    // Asociar imágenes a cada persona manualmente por userId
+    const personsWithImages = persons.map((person) => {
+      const userImages = images.filter(img => img.userId === person.id);
+      return {
+        ...person,
+        images: userImages,
+      };
+    });
+
+    res.json({ success: true, message: personsWithImages });
+
+  } catch (error) {
+    res.status(500).send({ success: false, message: error.message });
+  }
+};
+
+
 
 
 
@@ -262,5 +286,6 @@ module.exports = {
   getByEmail,
   deleteUser,
   resetPass,
-  generateTokenByUser
+  generateTokenByUser,
+  GetUsers
 };

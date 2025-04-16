@@ -15,6 +15,7 @@ import RecuperarPass from './pages/recuperarPass/recuperar';
 
 import usePageTracking from './hooks/useGa';
 import PageEntrance from './components/pageEfect/pageEfect';
+import Infouser from './pages/Infouser/Infouser';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/validate" element={<PageEntrance><CorreoOk/></PageEntrance>} />
           <Route path="/Priv" element={<PageEntrance><Priv/></PageEntrance>} />
           <Route path="/Ganadores" element={<PageEntrance><Ganadores/></PageEntrance>} />
+          <Route path="admin/infoUers/total" element={<Infouser/>} />
           <Route path="/pass/:id" element={<RecuperarPass />} />
          </Routes>
       </BrowserRouter>

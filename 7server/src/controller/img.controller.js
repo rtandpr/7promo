@@ -38,8 +38,6 @@ const createImg = async (req, res) => {
   }
 };
 
-
-
 const getImgByidUser = async (req, res) => {
   try {
 
