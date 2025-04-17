@@ -117,6 +117,7 @@ const Infouser = () => {
                             Realizar sorteo
                         </button>
                     </div>
+
                     {ganador && (
                         <div className={styles.userCard}>
                             <h2 style={{ textAlign: "center" }}> ¡Ganador! </h2>
@@ -124,6 +125,17 @@ const Infouser = () => {
                             <p><strong>Email:</strong> {ganador.email}</p>
                             <p><strong>Teléfono:</strong> {ganador.tel}</p>
                             <p><strong>Imágenes subidas:</strong> {ganador.images.length}</p>
+
+                            {ganador.images?.[0] && (
+                                <div style={{ marginTop: "10px", textAlign: "center" }}>
+                                    <h4>Imagen del sorteo</h4>
+                                    <img
+                                        src={ganador.images[0].img}
+                                        alt="Primera imagen del ganador"
+                                        className={styles.imagePreview}
+                                    />
+                                </div>
+                            )}
                         </div>
                     )}
 
