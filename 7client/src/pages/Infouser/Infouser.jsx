@@ -12,6 +12,7 @@ const Infouser = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [loading, setLoading] = useState(false);
     const [usuarios, setUsuarios] = useState([]);
+    const [ganador, setGanador] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,49 +26,62 @@ const Infouser = () => {
         }
     };
 
-
-
     useEffect(() => {
-
         const fetchUsuarios = async () => {
-            setLoading(true)
+            setLoading(true);
             try {
                 const response = await fetch("https://7promo-production.up.railway.app/user/GetUsers", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({}), // envía lo que necesites
+                    body: JSON.stringify({}),
                 });
 
                 const result = await response.json();
 
-                // Mapeamos cada usuario para combinar sus dataValues con images
-                const usuariosLimpios = result?.message?.map((usuario) => {
-                    return {
+                // Solo usuarios con al menos una imagen
+                const usuariosConImagen = result?.message
+                    ?.map((usuario) => ({
                         ...usuario.dataValues,
                         images: usuario.images || [],
-                    };
-                });
+                    }))
+                    .filter((usuario) => usuario.images.length > 0);
 
-                setUsuarios(usuariosLimpios);
-                console.log("result", result);
-                setLoading(false)
+                setUsuarios(usuariosConImagen);
+                console.log("Usuarios con imágenes:", usuariosConImagen);
+                setLoading(false);
 
             } catch (error) {
                 console.error("Error al obtener usuarios:", error);
-                setLoading(false)
+                setLoading(false);
             }
         };
+
         if (isAdmin) {
             fetchUsuarios();
         }
     }, [isAdmin]);
 
+    const realizarSorteo = () => {
+        if (usuarios.length === 0) {
+            alert("No hay usuarios con imágenes para realizar el sorteo");
+            return;
+        }
+
+        // Cada imagen representa una chance
+        const participantesConChances = usuarios.flatMap((usuario) =>
+            Array(usuario.images.length).fill(usuario)
+        );
+
+        const indiceGanador = Math.floor(Math.random() * participantesConChances.length);
+        const usuarioGanador = participantesConChances[indiceGanador];
+
+        setGanador(usuarioGanador);
+    };
+
     return (
         <div className={styles.div}>
-
-
             <form onSubmit={handleSubmit}>
                 <Input
                     placeholder="Correo electrónico"
@@ -85,47 +99,66 @@ const Infouser = () => {
                         handleChange={(e) => setPass(e.target.value)}
                     />
                 </div>
-                <button type="submit" style={{ marginTop: "10px" }}>
+                <button type="submit" style={{ marginTop: "10px" }} className={styles.btnStyle}>
                     Ingresar
                 </button>
             </form>
 
             {isAdmin && (
                 <div className={styles.userListContainer}>
-                    <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Lista de Usuarios</h2>
+                    <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Lista de Participantes</h2>
 
-                    {
-                        loading ? <h2 style={{ textAlign: "center", marginBottom: "30px" }}>CARGANDO...</h2> : null
-                    }
-                    {usuarios?.map((user, index) => (
-                        <div key={index} className={styles.userCard}>
-                            <h3>{user.name} {user.lastName}</h3>
-                            <p><strong>Email:</strong> {user.email}</p>
-                            <p><strong>Teléfono:</strong> {user.tel}</p>
-                            <p><strong>Puntos:</strong> {user.totalPoints}</p>
-                            <p><strong>Privacidad:</strong> {user.privacidad ? "Sí" : "No"}</p>
-                            <p><strong>Términos y condiciones:</strong> {user.Términosycondiciones ? "Sí" : "No"}</p>
-                            <p><strong>Recibir info:</strong> {user.recibirinformación ? "Sí" : "No"}</p>
+                    <p style={{ textAlign: "center", marginBottom: "20px" }}>
+                        <strong>Total de participantes con imágenes: {usuarios.length}</strong>
+                    </p>
 
-                            {user?.images?.length > 0 && (
-                                <div>
-                                    <h4>Imágenes</h4>
-                                    <div className={styles.imageGrid}>
-                                        {user.images.map((img, i) => (
-                                            <img
-                                                key={i}
-                                                src={img.img}
-                                                alt={`img-${i}`}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
+                    <div className={styles.divCenter}>
+                        <button onClick={realizarSorteo} style={{ marginBottom: "20px" }} className={styles.btnStyle}>
+                            Realizar sorteo
+                        </button>
+                    </div>
+                    {ganador && (
+                        <div className={styles.userCard}>
+                            <h2 style={{ textAlign: "center" }}> ¡Ganador! </h2>
+                            <h3>{ganador.name} {ganador.lastName}</h3>
+                            <p><strong>Email:</strong> {ganador.email}</p>
+                            <p><strong>Teléfono:</strong> {ganador.tel}</p>
+                            <p><strong>Imágenes subidas:</strong> {ganador.images.length}</p>
                         </div>
-                    ))}
+                    )}
+
+                    {loading ? (
+                        <h2 style={{ textAlign: "center", marginBottom: "30px" }}>CARGANDO...</h2>
+                    ) : (
+                        usuarios?.map((user, index) => (
+                            <div key={index} className={styles.userCard}>
+                                <h3>{user.name} {user.lastName}</h3>
+                                <p><strong>Email:</strong> {user.email}</p>
+                                <p><strong>Teléfono:</strong> {user.tel}</p>
+                                <p><strong>Puntos:</strong> {user.totalPoints}</p>
+                                <p><strong>Privacidad:</strong> {user.privacidad ? "Sí" : "No"}</p>
+                                <p><strong>Términos y condiciones:</strong> {user.Términosycondiciones ? "Sí" : "No"}</p>
+                                <p><strong>Recibir info:</strong> {user.recibirinformación ? "Sí" : "No"}</p>
+
+                                {user?.images?.length > 0 && (
+                                    <div>
+                                        <h4>Imágenes</h4>
+                                        <div className={styles.imageGrid}>
+                                            {user.images.map((img, i) => (
+                                                <img
+                                                    key={i}
+                                                    src={img.img}
+                                                    alt={`img-${i}`}
+                                                />
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        ))
+                    )}
                 </div>
             )}
-
         </div>
     );
 };
