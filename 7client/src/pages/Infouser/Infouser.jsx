@@ -82,7 +82,7 @@ const Infouser = () => {
 
     return (
         <div className={styles.div}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={styles.form}>
                 <Input
                     placeholder="Correo electrónico"
                     type="email"
