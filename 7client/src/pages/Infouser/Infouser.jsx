@@ -12,6 +12,7 @@ const Infouser = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [loading, setLoading] = useState(false);
     const [usuarios, setUsuarios] = useState([]);
+    const [usuariosTotal, setUsuariosTotal] = useState(0);
     const [ganador, setGanador] = useState(null);
 
     const handleSubmit = (e) => {
@@ -40,6 +41,7 @@ const Infouser = () => {
 
                 const result = await response.json();
 
+                setUsuariosTotal(result?.message?.length);
                 // Solo usuarios con al menos una imagen
                 const usuariosConImagen = result?.message
                     ?.map((usuario) => ({
@@ -106,7 +108,11 @@ const Infouser = () => {
 
             {isAdmin && (
                 <div className={styles.userListContainer}>
-                    <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Lista de Participantes</h2>
+                    <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Lista de Participantes</h2> 
+
+                    <p style={{ textAlign: "center", marginBottom: "20px" }}>
+                        <strong>Total de participantes : {usuariosTotal}</strong>
+                    </p>
 
                     <p style={{ textAlign: "center", marginBottom: "20px" }}>
                         <strong>Total de participantes con imágenes: {usuarios.length}</strong>
